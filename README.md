@@ -27,41 +27,66 @@ Clone the repository by running:
 
 ```Python
 
-git clone https://github.com/Ladeologun/HEALTHAPI.git
+git clone https://github.com/SanRaph/drohealthapiassessment.git
 
 ```
 
 Then run the following commands consecutively
-cd HEALTHAPI 
+
+```Python
+cd drohealthapiassessment
+```
+
+```Python
 python3 -m venv venv
+```
+ 
 To activate virtual environment (MacOS users):
+```Python
 source venv/bin/activate
+```
 To activate virtual environment (Windows users):
+```Python
 source venv/Source/activate
+```
 Install dependencies as follows (both MacOS & Windows):
+```Python
 pip3 install -r requirements.txt
+```
 To run unit tests, run the command below:
+```Python
 python3 manage.py test
-Make migrations by running the commands below in succession:
+```
+
+Make migrations by running the commands below:
+```Python
 python3 manage.py makemigrations
+```
+```Python
 python3 manage.py migrate
+```
+
 To start the Django server, run:
+```Python
 python3 manage.py runserver
+```
 The API endpoints are now available to be used
 Registration
 Open Postman and register a user for by making a POST request to the address below and with a payload in json format. A sample has been provided below
 Endpoint
 
- http://127.0.0.1:8000/womens-health/api/register/
+ http://localhost:8080/user/account/
 Payload
 
+```Python
 {
-    "email":"kaihavertz100@gmail.com",
-    "fullname":"kai havertz",
-    "mobile_number":"07060165309",
-    "password":"adegbenro23.",
-    "age":23
+    "user":"San",
+    "email":"san@san.com",
+    "password":"123pass321"
 }
+```
+
+
 A response containing the details of the user will be received to confirm registration
 Response
 
