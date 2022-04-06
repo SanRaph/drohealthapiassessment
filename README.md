@@ -76,9 +76,10 @@ Open Postman and register a user for by making a POST request to the address bel
 Endpoint
 
  http://localhost:8080/user/account/
-Payload
 
 ```Python
+Payload
+
 {
     "user":"San",
     "email":"san@san.com",
@@ -88,30 +89,33 @@ Payload
 
 
 A response containing the details of the user will be received to confirm registration
-Response
+Response with a Token
 
+```Python
 {
-    "email":"kaihavertz100@gmail.com",
-    "fullname":"kai havertz",
-    "mobile_number":"07060165309",
-    "age":23
+    "id": 4,
+    "username": "quams",
+    "email": "quams@quams.com",
+    "token": "1560ec66e4fe82d859d619967f0a6a2b8dc0ee37"
 }
+
+```
+
 Login
 The registered user can login by making another POST request to the address below and with a payload (email & password) in json format. A sample also has been provided below
 Endpoint
 
- http://127.0.0.1:8000/womens-health/api/login/
+ http://localhost:8080/user/api-token-auth/
 Payload
 
 {
-    "email":"kaihavertz100@gmail.com",
-    "password":"adegbenro23."
+    "username": "sanraph",
+    "password": "raphytex"
 }
-A response containing a success message and generated token to authorize the user to make further requests
+A response token will be returned as a respons.
 Response
 
 {
-    "message": "success",
     "token": <random_generated_token>
 }
 Creation of Cycle (Authorization)
@@ -119,44 +123,43 @@ The registered user can create a cycle by making a POST request to the address b
 Note: This endpoint requires Token Authentication. The generated token in the LOGIN endpoint can be passed into the headers in the format also described below
 Endpoint
 
-http://127.0.0.1:8000/womens-health/api/create-cycles/
+http://localhost:8080/menstruation
 Headers
 
 "Authorization" : "Token <generated_token>"
 Payload
 
 {
-    "Last_period_date":"2020-06-20",
+    "Last_period_date":"2022-08-20",
     "Cycle_average":25,
     "Period_average": 5,
-    "Start_date":"2020-07-25",
-    "End_date":"2021-07-25"
+    "Start_date":"2022-09-26",
+    "End_date":"2021-09-26"
 }
 A response containing the name of the user and total_created_cycles will be received.
 Expected result has been displayed below
 Response
 
 {
-    "name": "kai havertz",
-    "total_created_cycles": 15
+    "total_created_cycles for Anna": 15
 }
 Updating of Cycle (Authorization)
 The registered user can create a cycle by making a PUT request to the address below and with a payload in json format which will update user information. A sample also has been provided below
 Note: This endpoint also requires Token Authentication. The generated token in the LOGIN endpoint needs to be passed into the headers in the format also described below
 Endpoint
 
-http://127.0.0.1:8000/womens-health/api/create-cycles/
+[put]  http://localhost:8080/menstruation
 Headers
 
 "Authorization" : "Token <generated_token>"
 Payload
 
 {
-    "Last_period_date":"2020-06-20",
+   "Last_period_date":"2022-08-20",
     "Cycle_average":25,
-    "Period_average": 7,
-    "Start_date":"2020-07-25",
-    "End_date":"2021-08-25"
+    "Period_average": 6,
+    "Start_date":"2022-09-26",
+    "End_date":"2021-09-26"
 }
 A response containing the name of the user and total_created_cycles will be received.
 Expected result has been displayed below
@@ -171,7 +174,7 @@ The registered user can view their current cycle events by making a GET request 
 Note: This endpoint also requires Token Authentication. The generated token in the LOGIN endpoint needs to be passed into the headers in the format also described below
 Endpoint
 
-http://127.0.0.1:8000/women-healths/api/cycle-event/?date=2021-01-05
+http://localhost:8080/menstruation-list
 Headers
 
 "Authorization" : "Token <generated_token>"
