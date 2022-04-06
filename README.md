@@ -3,10 +3,10 @@
 ### Predict menstruation cycles
 
 
-##### This is a REST API REST API that helps estimate a woman’s period cycles within a specific timeframe
+##### A REST API that helps predict a woman’s period cycles within a specific timeframe
 
 * [x] Getting Started
-To run this application locally:
+To run this application on your machine:
 
 * [x] Open up terminal (on MacOS) and switch directory to Desktop by running:
 
@@ -22,7 +22,7 @@ cd Desktop
 
 ```
 
-* [x] Clone the repository by running:
+* [x] Clone the repository by running the command below:
 
 
 ```Python
@@ -31,7 +31,7 @@ git clone https://github.com/SanRaph/drohealthapiassessment.git
 
 ```
 
-* [x] Then run the following commands consecutively
+* [x] Next up run the following commands respectively:
 
 ```Python
 cd drohealthapiassessment
@@ -58,7 +58,7 @@ pip3 install -r requirements.txt
 python3 manage.py test
 ```
 
-* [x] Make migrations by running the commands below:
+* [x] Run the commands below to make migrations:
 ```Python
 python3 manage.py makemigrations
 ```
@@ -70,10 +70,10 @@ python3 manage.py migrate
 ```Python
 python3 manage.py runserver
 ```
-The API endpoints are now available to be used
+The API endpoints are now available for use.
 
 * [x] Registration
-Open Postman and register a user for by making a POST request to the address below and with a payload in json format. A sample has been provided below
+Open Postman, curl or Httpie and register a user by making a POST request to the address below and with a payload in json format.
 Endpoint
 
 ```Python
@@ -92,7 +92,7 @@ Payload
 ```
 
 
-A response containing the details of the user will be received to confirm registration
+A response containing the details of the user will be returned to confirm registration
 Response with a Token
 
 ```Python
@@ -106,7 +106,7 @@ Response with a Token
 ```
 
 * [x] Login
-The registered user can login by making another POST request to the address below and with a payload (email & password) in json format. A sample also has been provided below
+The registered user can login by making another POST request to the address below and with a payload (email & password) in json format to receive a Token.
 Endpoint
 
 ```Python
@@ -132,8 +132,8 @@ Response
 }
 ```
 * [x] Creation of Cycle (Authorization)
-The registered user can create a cycle by making a POST request to the address below and with a payload in json format. A sample also has been provided below
-Note: This endpoint requires Token Authentication. The generated token in the LOGIN endpoint can be passed into the headers in the format also described below
+The registered user can create a cycle by making a POST request to the address below and with a payload in json format.
+PS: This endpoint requires Token Authentication. The generated token in the requested above can be passed into the headers in the format.
 Endpoint
 
 ```Python
@@ -159,8 +159,7 @@ Payload
 
 
 ```
-A response containing the name of the user and total_created_cycles will be received.
-Expected result has been displayed below
+A response is received in the format below.
 
  ```Python
  Response
@@ -172,8 +171,8 @@ Expected result has been displayed below
 ```
 
 * [x] Updating of Cycle (Authorization)
-The registered user can create a cycle by making a PUT request to the address below and with a payload in json format which will update user information. A sample also has been provided below
-Note: This endpoint also requires Token Authentication. The generated token in the LOGIN endpoint needs to be passed into the headers in the format also described below
+The registered user can create a cycle by making a PUT request to the address below and with a payload in json format which will update user information.
+PS: This endpoint also requires Token Authentication. Follow as shown above.
 Endpoint
 
 ```Python
@@ -197,8 +196,7 @@ Payload
 
 ```
 
-A response containing the name of the user and total_created_cycles will be received.
-Expected result has been displayed below
+A response containing the name of the user and an updated total_created_cycles will be returned.
  ```Python
  Response
 
@@ -208,12 +206,12 @@ Expected result has been displayed below
 
 ```
 * [x] Listing of Cycle Events (Authorization)
-The registered user can view their current cycle events by making a GET request to the address below and without any payload. However, a path parameter (date) needs to be provided in the url. An example has been provided below
-Note: This endpoint also requires Token Authentication. The generated token in the LOGIN endpoint needs to be passed into the headers in the format also described below
+The registered user can view their current cycle events by making a GET request to the address below and without any payload but a path parameter of <i>date</i> needs to be provided in the url.
+PS: This endpoint also requires Token Authentication.
 Endpoint
 
 ```Python
-http://localhost:8080/menstruation-list
+http://localhost:8080/menstruation-list?date=2020-06-20
 
 ```
 
