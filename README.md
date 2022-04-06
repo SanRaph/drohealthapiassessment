@@ -6,7 +6,7 @@
 ##### A REST API that helps predict a woman’s period cycles within a specific timeframe
 
 <emp>Getting Started</emp>
-<i>To run this application on your machine:</i>
+<p><i>To run this application on your machine:</i></p>
 
 * [x] Open up terminal (on MacOS) and switch directory to Desktop by running:
 
