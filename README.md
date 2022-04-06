@@ -106,25 +106,33 @@ The registered user can login by making another POST request to the address belo
 Endpoint
 
  http://localhost:8080/user/api-token-auth/
+ 
+ ```Python
 Payload
 
 {
     "username": "sanraph",
     "password": "raphytex"
 }
+```
 A response token will be returned as a respons.
+
+ ```Python
 Response
 
 {
     "token": <random_generated_token>
 }
+```
 Creation of Cycle (Authorization)
 The registered user can create a cycle by making a POST request to the address below and with a payload in json format. A sample also has been provided below
 Note: This endpoint requires Token Authentication. The generated token in the LOGIN endpoint can be passed into the headers in the format also described below
 Endpoint
-
 http://localhost:8080/menstruation
-Headers
+
+
+ ```Python
+ Headers
 
 "Authorization" : "Token <generated_token>"
 Payload
@@ -136,19 +144,29 @@ Payload
     "Start_date":"2022-09-26",
     "End_date":"2021-09-26"
 }
+
+
+```
 A response containing the name of the user and total_created_cycles will be received.
 Expected result has been displayed below
-Response
+
+ ```Python
+ Response
 
 {
     "total_created_cycles for Anna": 15
 }
+
+```
+
 Updating of Cycle (Authorization)
 The registered user can create a cycle by making a PUT request to the address below and with a payload in json format which will update user information. A sample also has been provided below
 Note: This endpoint also requires Token Authentication. The generated token in the LOGIN endpoint needs to be passed into the headers in the format also described below
 Endpoint
 
 [put]  http://localhost:8080/menstruation
+
+ ```Python
 Headers
 
 "Authorization" : "Token <generated_token>"
@@ -161,28 +179,40 @@ Payload
     "Start_date":"2022-09-26",
     "End_date":"2021-09-26"
 }
+
+```
+
 A response containing the name of the user and total_created_cycles will be received.
 Expected result has been displayed below
-Response
+ ```Python
+ Response
 
 {
-    "name": "kai havertz",
-    "total_created_cycles": 16
+    "total_created_cycles for Anna": 15
 }
+
+```
 Listing of Cycle Events (Authorization)
 The registered user can view their current cycle events by making a GET request to the address below and without any payload. However, a path parameter (date) needs to be provided in the url. An example has been provided below
 Note: This endpoint also requires Token Authentication. The generated token in the LOGIN endpoint needs to be passed into the headers in the format also described below
 Endpoint
 
 http://localhost:8080/menstruation-list
-Headers
+
+ ```Python
+ Headers
 
 "Authorization" : "Token <generated_token>"
+
+```
+
 A response containing the event and the date will be received.
 Expected result has been displayed below
-Response
+ ```Python
+ Response
 
 {
-    "event": "post_ovulation_window",
-    "date": "2021-01-05"
+    "total_created_cycles for Anna": 15
 }
+
+```
