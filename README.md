@@ -75,7 +75,10 @@ Registration
 Open Postman and register a user for by making a POST request to the address below and with a payload in json format. A sample has been provided below
 Endpoint
 
+```Python
  http://localhost:8080/user/account/
+
+```
 
 ```Python
 Payload
@@ -105,7 +108,10 @@ Login
 The registered user can login by making another POST request to the address below and with a payload (email & password) in json format. A sample also has been provided below
 Endpoint
 
+```Python
  http://localhost:8080/user/api-token-auth/
+
+```
  
  ```Python
 Payload
@@ -128,7 +134,12 @@ Creation of Cycle (Authorization)
 The registered user can create a cycle by making a POST request to the address below and with a payload in json format. A sample also has been provided below
 Note: This endpoint requires Token Authentication. The generated token in the LOGIN endpoint can be passed into the headers in the format also described below
 Endpoint
+
+```Python
 http://localhost:8080/menstruation
+
+```
+
 
 
  ```Python
@@ -164,7 +175,10 @@ The registered user can create a cycle by making a PUT request to the address be
 Note: This endpoint also requires Token Authentication. The generated token in the LOGIN endpoint needs to be passed into the headers in the format also described below
 Endpoint
 
+```Python
 [put]  http://localhost:8080/menstruation
+
+```
 
  ```Python
 Headers
@@ -197,7 +211,10 @@ The registered user can view their current cycle events by making a GET request 
 Note: This endpoint also requires Token Authentication. The generated token in the LOGIN endpoint needs to be passed into the headers in the format also described below
 Endpoint
 
+```Python
 http://localhost:8080/menstruation-list
+
+```
 
  ```Python
  Headers
