@@ -70,6 +70,12 @@ python3 manage.py migrate
 ```Python
 python3 manage.py runserver
 ```
+You can create super user using this command to gain access as admin:
+```Python
+ python manage.py createsuperuser
+
+```
+
 The API endpoints are now available for use.
 
 * [x] Registration
