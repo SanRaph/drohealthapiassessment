@@ -5,16 +5,16 @@
 
 ##### This is a REST API REST API that helps estimate a woman’s period cycles within a specific timeframe
 
-Getting Started
+* [x] Getting Started
 To run this application locally:
 
-Open up terminal (on MacOS) and switch directory to Desktop by running:
+* [x] Open up terminal (on MacOS) and switch directory to Desktop by running:
 
 ```Python
 cd ~
 
 ```
-For Windows, open git bash and switch directory to desired folder e.g:
+* [x] For Windows, open git bash and switch directory to desired folder e.g:
 
 ```Python
 
@@ -22,7 +22,7 @@ cd Desktop
 
 ```
 
-Clone the repository by running:
+* [x] Clone the repository by running:
 
 
 ```Python
@@ -31,7 +31,7 @@ git clone https://github.com/SanRaph/drohealthapiassessment.git
 
 ```
 
-Then run the following commands consecutively
+* [x] Then run the following commands consecutively
 
 ```Python
 cd drohealthapiassessment
@@ -41,24 +41,24 @@ cd drohealthapiassessment
 python3 -m venv venv
 ```
  
-To activate virtual environment (MacOS users):
+* [x] To activate virtual environment (MacOS users):
 ```Python
 source venv/bin/activate
 ```
-To activate virtual environment (Windows users):
+* [x] To activate virtual environment (Windows users):
 ```Python
 source venv/Source/activate
 ```
-Install dependencies as follows (both MacOS & Windows):
+* [x] Install dependencies as follows (both MacOS & Windows):
 ```Python
 pip3 install -r requirements.txt
 ```
-To run unit tests, run the command below:
+* [x] To run unit tests, run the command below:
 ```Python
 python3 manage.py test
 ```
 
-Make migrations by running the commands below:
+* [x] Make migrations by running the commands below:
 ```Python
 python3 manage.py makemigrations
 ```
@@ -66,12 +66,13 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-To start the Django server, run:
+* [x] To start the Django server, run:
 ```Python
 python3 manage.py runserver
 ```
 The API endpoints are now available to be used
-Registration
+
+* [x] Registration
 Open Postman and register a user for by making a POST request to the address below and with a payload in json format. A sample has been provided below
 Endpoint
 
@@ -104,7 +105,7 @@ Response with a Token
 
 ```
 
-Login
+* [x] Login
 The registered user can login by making another POST request to the address below and with a payload (email & password) in json format. A sample also has been provided below
 Endpoint
 
@@ -130,7 +131,7 @@ Response
     "token": <random_generated_token>
 }
 ```
-Creation of Cycle (Authorization)
+* [x] Creation of Cycle (Authorization)
 The registered user can create a cycle by making a POST request to the address below and with a payload in json format. A sample also has been provided below
 Note: This endpoint requires Token Authentication. The generated token in the LOGIN endpoint can be passed into the headers in the format also described below
 Endpoint
@@ -170,7 +171,7 @@ Expected result has been displayed below
 
 ```
 
-Updating of Cycle (Authorization)
+* [x] Updating of Cycle (Authorization)
 The registered user can create a cycle by making a PUT request to the address below and with a payload in json format which will update user information. A sample also has been provided below
 Note: This endpoint also requires Token Authentication. The generated token in the LOGIN endpoint needs to be passed into the headers in the format also described below
 Endpoint
@@ -206,7 +207,7 @@ Expected result has been displayed below
 }
 
 ```
-Listing of Cycle Events (Authorization)
+* [x] Listing of Cycle Events (Authorization)
 The registered user can view their current cycle events by making a GET request to the address below and without any payload. However, a path parameter (date) needs to be provided in the url. An example has been provided below
 Note: This endpoint also requires Token Authentication. The generated token in the LOGIN endpoint needs to be passed into the headers in the format also described below
 Endpoint
