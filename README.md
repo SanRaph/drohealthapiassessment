@@ -5,8 +5,8 @@
 
 ##### A REST API that helps predict a woman’s period cycles within a specific timeframe
 
-* [x] Getting Started
-To run this application on your machine:
+<emp>Getting Started</emp>
+<i>To run this application on your machine:</i>
 
 * [x] Open up terminal (on MacOS) and switch directory to Desktop by running:
 
@@ -222,7 +222,7 @@ http://localhost:8080/menstruation-list?date=2020-06-20
 
 ```
 
-A response containing the event and the date will be received.
+A response containing the event will be returned.
 Expected result has been displayed below
  ```Python
  Response
