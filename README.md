@@ -187,7 +187,7 @@ Headers
 Payload
 
 {
-   "Last_period_date":"2022-08-20",
+    "Last_period_date":"2022-08-20",
     "Cycle_average":25,
     "Period_average": 6,
     "Start_date":"2022-09-26",
